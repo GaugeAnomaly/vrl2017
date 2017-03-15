@@ -7,12 +7,12 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-    r = requests.get('http://www.neti.ee')
+    #r = requests.get('http://www.neti.ee')
     #r = requests.get('http://httpbin.org/status/418')
     #print(r.text)
-    return HttpResponse(r.text)
+    #return HttpResponse(r.text)
     # return HttpResponse('Hello from Python!')
-    # return render(request, 'index.html')
+    return render(request, 'static/index.html')
 
 
 def db(request):
