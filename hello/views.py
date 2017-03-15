@@ -7,7 +7,7 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-    r = requests.get('http://www.google.ee')
+    r = requests.get('http://www.neti.ee')
     #r = requests.get('http://httpbin.org/status/418')
     #print(r.text)
     return HttpResponse(r.text)
