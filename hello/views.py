@@ -12,7 +12,7 @@ def index(request):
     #print(r.text)
     #return HttpResponse(r.text)
     # return HttpResponse('Hello from Python!')
-    return render(request, '../static/style.css')
+    return render(request, 'WebApp.html')
 
 
 def db(request):
