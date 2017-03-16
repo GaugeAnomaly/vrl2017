@@ -78,6 +78,7 @@ a {
 }
 
 #popular {
+	text-align:center;
 	background-color:#FFFFFF;
 	width: 600px;
 	float: left;
