@@ -2,8 +2,9 @@
 <html>
 	<head>
 		<title>Veebirakendus</title>
-		<link rel="stylesheet" type="text/css" href="../static/style.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
+	
 	<body>
 		<div id="header">
 			<div id="path">
@@ -15,54 +16,73 @@
 			</div>
 			
 			<div id="title">
-				TITLE
+				UT-IP
 			</div>
 					
 		</div>
 		
 		<div id="line">
-			<img src="../static/images/line.png" alt="" width="1500" height="7"/>
+			<img src="images/line.png" alt="" width="1500" height="7"/>
 		</div>
 		
 		<div id="language">
 			<a href="veebirakendus.ee/eesti">
-				<img src="../static/images/estonia.png" alt="eesti keel" width="40" height="30"/>
+				<img src="images/estonia.png" alt="eesti keel" width="40" height="30"/>
 			</a>
 			<a href="veebirakendus.ee/english">
-				<img src="../static/images/english.png" alt="english language" width="45" height="30"/>
+				<img src="images/english.png" alt="english language" width="45" height="30"/>
 			</a>
 			<br></br>
 		</div>
 		
 		<div id="questions">
-			<a href="veebirakendus.ee/how">How</a>
-			<a href="veebirakendus.ee/what">What</a>
-			<a href="veebirakendus.ee/why">Why</a>
-			<br><a href="veebirakendus.ee/results">Results</a></br>
-			<br></br>
+			<div id="how">
+				<a href="veebirakendus.ee/how" class="round">How</a>
+			</div>
+			
+			<div id="results">
+				<a href="veebirakendus.ee/results" class="round">Results</a>
+			</div>
+		
+			<div id="why">
+				<a href="veebirakendus.ee/what" class="round">What</a>
+				<a href="veebirakendus.ee/why" class="round">Why</a>
+			</div>
+			
 		</div>
 		
 		<div id="content">
-			<div id="popular">
-				<h2>Most Popular</h2>
-				<img src="pilt.png" alt="pilt"/>
-				<h3>Pealkiri</h3>
-				<p>Kõige populaarsema ettepaneku tekst</p>
+			<div id="popular" class="round" >
+				<h2 class="bottom"><center>Most Popular</center></h2>
+				<h3><img src="images/rektor.jpg" style="width:180px;height:250px;margin-left:30px"/>
+				Make UT Great Again!
+				</h3>
+				
+				
+				<p style="margin-left:30px">Just Do It!</p>
 			</div>
 			
-			<div id="other">
-				<h2>Other
+			<div id="other" class="round" >
+				<h2 class="bottom"><center>Other
 					<a href="veebirakendus.ee/other">
-						<img src="../static/images/plus.png" alt="other" width="20" height="20"/>
+						<img src="images/plus.png" alt="other" width="20" height="20"/>
 					</a>
+				</center>
 				</h2>
+				
 				<ul>
-					<li><img src="pilt.png" alt="pilt1"/>
-					<h3>Pealkiri1</h3></li>
-					<li><img src="pilt.png" alt="pilt2"/>
-					<h3>Pealkiri2</h3></li>
-					<li><img src="pilt.png" alt="pilt3"/>
-					<h3>Pealkiri3</h3></li>
+					<h3 class="bottom">
+					<img src="images/pepe.jpg" width="150" height="100"/> 
+					</h3>
+					
+					<h3 class="bottom">
+					<img src="images/doit.jpg" width="150" height="100"/>
+					Pealkiri2
+					</h3>
+					
+					<h3 class="bottom">
+					<img src="images/hoone.jpg" width="150" height="100"/>
+					Pealkiri3</h3>
 				</ul>
 			</div>
 		</div>
@@ -71,14 +91,14 @@
 			<div id="new">
 				<p>Create own initiative
 					<a href="veebirakendus.ee/new">
-								<img src="../static/images/new.png" alt="new" width="20" height="20"/>
+								<img src="images/new.png" alt="new" width="20" height="20"/>
 					</a>
 				</p>
 			</div>
 			
 			<div id="info">
 				<a href="veebirakendus.ee/info">
-							<img src="../static/images/question.png" alt="INFO" width="20" height="20"/>
+							<img src="images/question.png" alt="INFO" width="20" height="20"/>
 						</a>
 			</div>
 		</div>

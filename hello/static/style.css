@@ -1,9 +1,23 @@
 body {
-	background-color: #FDFDFD;
+	background-color: #F5EFEF;
 	width: 1500px;
 	margin-left: auto;
 	margin-right: auto;
 	font-family: Helvetica, Arial;
+}
+
+.round{
+	border: 2px solid;
+	border-radius: 8px;
+	border-color: black;
+}
+
+.bottom{
+	border-bottom: 2px solid;
+}
+
+h3{
+	font-size: 30;
 }
 
 a {
@@ -13,6 +27,7 @@ a {
 #header {
 	text-align: center;
 	padding: 15px;
+	background-color: #1682EE;
 }
 
 #title {
@@ -37,19 +52,39 @@ a {
 }
 
 #questions {
-	text-align: center;
+	font-size: 30px;
+}
+
+#questions a{
+	padding: 25px 45px 25px 45px;
+}
+
+#how{
+	margin-left: 380px;
+}
+
+#why{
+	margin-top: 30px;
+	margin-left: 310px;
+}
+
+#results{
+	margin-left: 860px;
+	margin-top: 10px;
 }
 
 #content {
-	padding: 50px
+	padding: 50px;
 }
 
 #popular {
+	background-color:#FFFFFF;
 	width: 600px;
 	float: left;
 }
 
 #other {
+	background-color:#FFFFFF;
 	width: 600px;
 	float: right;
 }
