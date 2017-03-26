@@ -14,6 +14,12 @@ def index(request):
     # return HttpResponse('Hello from Python!')
     return render(request, 'home.html')
 
+def all(request):
+    return render(request, 'initiatives.html')
+
+def create(request):
+    return render(request, 'create.html')
+
 
 def db(request):
     greeting = Greeting()
