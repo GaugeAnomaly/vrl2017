@@ -12,7 +12,7 @@ def index(request):
     #print(r.text)
     #return HttpResponse(r.text)
     # return HttpResponse('Hello from Python!')
-    return render(request, 'WebApp.html')
+    return render(request, 'home.html')
 
 
 def db(request):

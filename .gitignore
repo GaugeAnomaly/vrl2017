@@ -59,4 +59,4 @@ build/
 tests/report/
 *.directory
 *.idea/
-Thumbs.db
+*Thumbs.db
