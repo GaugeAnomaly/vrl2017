@@ -20,6 +20,9 @@ def all(request):
 def create(request):
     return render(request, 'create.html')
 
+def results(request):
+    return render(request, 'results.html')
+
 
 def db(request):
     greeting = Greeting()
