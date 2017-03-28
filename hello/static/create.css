@@ -49,11 +49,11 @@ body {
 }
 
 #initiative h1{
-  font-size: 40px;
   text-align: center;
-  border: 1px solid;
-  border-radius: 5px;
-  padding: 30px;
+  font-size: 80px;
+  margin-top: 50px;
+  border-bottom-style: solid;
+  padding-bottom: 20px;
 }
 
 #initiative p{
@@ -97,14 +97,14 @@ body {
   border: 1px solid;
 }
 
+#initiative ol{
+  padding-top: 40px;
+}
+
 /* Footer */
 
-.footer {
-  margin-top: 20px;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  border-top: 1px solid #B9B9B9;
+.footer h2{
+  padding-bottom: 15px;
 }
 
 .footer .container {

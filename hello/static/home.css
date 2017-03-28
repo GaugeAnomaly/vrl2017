@@ -73,24 +73,33 @@ body {
 ------------------------- */
 
 .media {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 5px;
-  padding: 10px 20px 10px 20px;
+  border: solid;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.media p{
+  font-size: 20px;
+}
+
+.media h2{
+  font-size: 35px;
 }
 
 .gap-right {
   margin-right: 20px;
 }
 
+.pager {
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-bottom: auto;
+}
+
 /* Footer */
 
-.footer {
-  margin-top: 20px;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  border-top: 1px solid #B9B9B9;
+.footer h2{
+  padding-bottom: 15px;
 }
 
 .footer .container {
