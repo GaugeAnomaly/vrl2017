@@ -56,33 +56,17 @@
             <div id="today" class="tab-pane fade in active">
               <div class="row">
                 <ul class="list-unstyled">
-                  <li class="media">
-                    <div class="col-md-3"><img class="d-flex mr-3"
-                      src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
-                    </div>
-                    <div class="media-body">
-                      <h3> Initiative nr.1 </h3>
-                      <p> Description </p>
-                    </div>
-                  </li>
-                  <li class="media my-4">
-                    <div class="col-md-3"><img class="d-flex mr-3"
-                      src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
-                    </div>
-                    <div class="media-body">
-                      <h3> Initiative nr.2 </h3>
-                      <p> Description </p>
-                    </div>
-                  </li>
-                  <li class="media">
-                    <div class="col-md-3"><img class="d-flex mr-3"
-                      src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
-                    </div>
-                    <div class="media-body">
-                      <h3> Initiative nr.3 </h3>
-                      <p> Description </p>
-                    </div>
-                  </li>
+                  {% for petition in petitions %}
+                      <li class="media">
+                        <div class="col-md-3"><img class="d-flex mr-3"
+                          src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
+                        </div>
+                        <div class="media-body">
+                          <h3>{{ petition.title_text }}</h3>
+                          <p>{{ petition.desc_text }}</p>
+                        </div>
+                      </li>
+                  {% endfor %}
                 </ul>
               </div>
             </div>  <!--today-->
