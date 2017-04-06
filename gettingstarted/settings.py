@@ -113,7 +113,8 @@ USE_TZ = True
 
 
 # Update database configuration with $DATABASE_URL.
-db_from_env = dj_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config(default="postgres://hhvptocjfjasgp:44e2dc67550df062b9d807051d19b065a7e394754072a5163857b197f968ae59@ec2-54-247-81-76.eu-west-1.compute.amazonaws.com:5432/dd90l2ipa4tllc",
+                                     conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()

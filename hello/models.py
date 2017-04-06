@@ -11,3 +11,4 @@ class Petition(models.Model):
     pub_date = models.DateTimeField('date published', auto_now_add=True)
     votes = models.IntegerField(default=0)
     desc_text = models.CharField(max_length=1000, default='Oleks tore kui saaks rohkem pannkooke')
+    improvement = models.CharField(max_length=1000, default='Oleks tore kui saaks rohkem pannkooke')
