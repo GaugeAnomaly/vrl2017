@@ -25,6 +25,7 @@
 
     <!-- Custom styles for this template -->
     <link href="../static/create.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -40,23 +41,23 @@
       <h1> Create your Initiative! </h1>
       <form>
         <ol>
-          <div class="form-group">
-            <li><label for="name">What initiative do you want to announce?</label></li>
+          <li><div class="form-group">
+            <label for="name">What initiative do you want to announce?</label>
             <input type="text" class="form-control" id="name">
             <p> The text should be specific. E.g. "Increase amount of parking lots near Philosophicum"
-          </div>
+          </div></li>
 
-          <div class="form-group">
-            <li><label for="comment">What you don't like in current state?</label></li>
+          <li><div class="form-group">
+            <label for="comment">What you don't like in current state?</label>
             <textarea class="form-control" rows="5" id="comment"></textarea>
             <p> Identify the problem. Write why is current state dissatisfy you and should be improved. </p>
-          </div>
+          </div></li>
 
-          <div class="form-group">
-            <li><label for="improvement">How your initiative will improve University life?</label></li>
+          <li><div class="form-group">
+            <label for="improvement">How your initiative will improve University life?</label>
             <textarea class="form-control" rows="5" id="improvement"></textarea>
             <p> Write what will change with your idea. Elicit response in others! </p>
-          </div>
+          </div></li>
         </ol>
         <div id="browse" class="col-md-6">
           <div class="form-group">
@@ -69,7 +70,6 @@
                   </span>
                   <input type="text" class="form-control" readonly>
               </div>
-              <img id='img-upload'/>
           </div>
         </div>
       </form>

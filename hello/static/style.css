@@ -1,0 +1,86 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  color: #5a5a5a;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+  width: auto;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 25px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+  height: 140px;
+  padding: 0;
+}
+.navbar-brand{
+  font-size: 90px;
+  margin-top: 35px;
+  padding-left: 125px;
+}
+
+
+/* FOOTER
+------------------------*/
+
+.footer h2{
+  padding-bottom: 15px;
+}
+
+.footer .container {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  /*.navbar-wrapper {
+    margin-top: 0px;
+  }*/
+  /*верхний бар по краям*/
+  .navbar-wrapper .container {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 10px;
+    padding-left: 50px;
+  }
+
+  .nav {
+    margin-top: 40px;
+    padding-left: 75px;
+  }
+
+  .login {
+    padding-left: 450px;
+  }
+
+}
