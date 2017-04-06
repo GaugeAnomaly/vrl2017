@@ -27,42 +27,16 @@
     <!-- Custom styles for this template -->
 	<!--link href="results.css" rel="stylesheet"-->
     <link href="../static/results.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
 
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   </head>
-<!-- NAVBAR
-================================================== -->
-  <body>
-    <div class="navbar-wrapper">
-      <div class="container">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="/">UT-IP</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="/initiative">Create Initiative</a></li>
-                <li><a href="/all">All Initiatives</a></li>
-                <li><a href="/results">Results</a></li>
-                <li class="login"><a href="/">Log in</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
 
-      </div>
-    </div>
+{% extends "vrl_base.html" %}
+{% block content %}
 
 
 <!-- RESULT -->
@@ -76,7 +50,7 @@
           <img src="../static/images/new2.jpg" alt="Thumbnail ">
           <div class="caption">
             <h2>Title</h2>
-            <p>Text of result.</p>
+            <p>Description of the result.</p>
             <p><a href="#" class="btn btn-primary" role="button">Read more</a> </p>
           </div>
         </div>
@@ -87,7 +61,7 @@
           <img src="../static/images/new2.jpg" alt="Thumbnail ">
           <div class="caption">
             <h2>Title</h2>
-            <p>Text of result.</p>
+            <p>Description of the result.</p>
             <p><a href="#" class="btn btn-primary" role="button">Read more</a> </p>
           </div>
         </div>
@@ -98,7 +72,7 @@
           <img src="../static/images/new2.jpg" alt="Thumbnail ">
           <div class="caption">
             <h2>Title</h2>
-            <p>Text of result.</p>
+            <p>Description of the result.</p>
             <p><a href="#" class="btn btn-primary" role="button">Read more</a> </p>
           </div>
         </div>
@@ -109,7 +83,7 @@
           <img src="../static/images/new2.jpg" alt="Thumbnail ">
           <div class="caption">
             <h2>Title</h2>
-            <p>Text of result.</p>
+            <p>Description of the result.</p>
             <p><a href="#" class="btn btn-primary" role="button">Read more</a> </p>
           </div>
         </div>
@@ -120,7 +94,7 @@
           <img src="../static/images/new2.jpg" alt="Thumbnail ">
           <div class="caption">
             <h2>Title</h2>
-            <p>Text of result.</p>
+            <p>Description of the result.</p>
             <p><a href="#" class="btn btn-primary" role="button">Read more</a> </p>
           </div>
         </div>
@@ -131,7 +105,7 @@
           <img src="../static/images/new2.jpg" alt="Thumbnail ">
           <div class="caption">
             <h2>Title</h2>
-            <p>Text of result.</p>
+            <p>Description of the result.</p>
             <p><a href="#" class="btn btn-primary" role="button">Read more</a> </p>
           </div>
         </div>
@@ -140,39 +114,9 @@
 
     <nav aria-label="Pages">
       <ul class="pager">
-        <li><a href="#" label="Previous page">Previous</a></li>
-        <li><a href="#" label="Next page">Next</a></li>
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
       </ul>
     </nav>
 
-
-    <!-- FOOTER -->
-    <nav class="nav navbar-inverse">
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7">
-              <h2>UT-IP</h2>
-              <p><a href="#"> About UT-IP</a></p>
-              <p><a href="#"> How does UT-IP work</a></p>
-              <p><a href="#"> Results</a></p>
-            </div>
-            <div class="col-lg-4">
-              <h2>Support</h2>
-              <p><a href="http://www.tyye.ee/en"> UT Student Council</a></p>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </nav>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+{% endblock %}

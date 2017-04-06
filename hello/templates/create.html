@@ -25,63 +25,39 @@
 
     <!-- Custom styles for this template -->
     <link href="../static/create.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   </head>
-<!-- NAVBAR
-================================================== -->
-  <body>
-    <div class="navbar-wrapper">
-      <div class="container">
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="/">UT-IP</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="/initiative">Create Initiative</a></li>
-                <li><a href="/all">All Initiatives</a></li>
-                <li><a href="/results">Results</a></li>
-                <li class="login"><a href="/">Log in</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
 
-      </div>
-    </div>
+{% extends "vrl_base.html" %}
+{% block content %}
+
+<!--Initiative form-->
 
     <div id="initiative" class="container">
       <h1> Create your Initiative! </h1>
       <form>
         <ol>
-          <div class="form-group">
-            <li><label for="name">What initiative do you want to announce?</label></li>
+          <li><div class="form-group">
+            <label for="name">What initiative do you want to announce?</label>
             <input type="text" class="form-control" id="name">
             <p> The text should be specific. E.g. "Increase amount of parking lots near Philosophicum"
-          </div>
+          </div></li>
 
-          <div class="form-group">
-            <li><label for="comment">What you don't like in current state?</label></li>
+          <li><div class="form-group">
+            <label for="comment">What you don't like in current state?</label>
             <textarea class="form-control" rows="5" id="comment"></textarea>
             <p> Identify the problem. Write why is current state dissatisfy you and should be improved. </p>
-          </div>
+          </div></li>
 
-          <div class="form-group">
-            <li><label for="improvement">How your initiative will improve University life?</label></li>
+          <li><div class="form-group">
+            <label for="improvement">How your initiative will improve University life?</label>
             <textarea class="form-control" rows="5" id="improvement"></textarea>
             <p> Write what will change with your idea. Elicit response in others! </p>
-          </div>
+          </div></li>
         </ol>
         <div id="browse" class="col-md-6">
           <div class="form-group">
@@ -94,41 +70,10 @@
                   </span>
                   <input type="text" class="form-control" readonly>
               </div>
-              <img id='img-upload'/>
           </div>
         </div>
       </form>
       <input type="submit" class="btn btn-default btn-block" value="Submit">
     </div>  <!--container-->
 
-
-    <!-- FOOTER -->
-    <nav class="nav navbar-inverse">
-      <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-7">
-              <h2>UT-IP</h2>
-              <p><a href="#"> About UT-IP</a></p>
-              <p><a href="#"> How does UT-IP work</a></p>
-              <p><a href="#"> Results</a></p>
-            </div>
-            <div class="col-lg-4">
-              <h2>Support</h2>
-              <p><a href="http://www.tyye.ee/en"> UT Student Council</a></p>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </nav>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+{% endblock %}
