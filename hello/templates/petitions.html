@@ -40,106 +40,29 @@
     <div id="all" class="container">
       <h1> Initiatives </h1>
       <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#popular">Popular</a></li>
+        <li class="active"><a data-toggle="tab" href="#popular">Most Popular</a></li>
         <li><a data-toggle="tab" href="#newest">Newest</a></li>
       </ul>
 
       <div class="tab-content">
         <div id="popular" class="tab-pane fade in active">
-          <ul class="nav nav-pills">
-            <li class="active"><a data-toggle="pill" href="#today">Today</a></li>
-            <li><a data-toggle="pill" href="#week">This week</a></li>
-            <li><a data-toggle="pill" href="#alltime">All time</a></li>
-          </ul>
+          <div class="row">
+            <ul class="list-unstyled">
+              {% for petition in latest_petitions %}
+                  <li class="media">
+                    <div class="col-md-3"><img class="d-flex mr-3"
+                      src="{{ petition.picture.url }}" alt="Generic placeholder image">
+                    </div>
+                    <div class="media-body">
+                      <h3>{{ petition.title_text }}</h3>
+                      <p>{{ petition.desc_text }}</p>
+                    </div>
+                  </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>  <!--today-->
 
-          <div class="tab-content">
-            <div id="today" class="tab-pane fade in active">
-              <div class="row">
-                <ul class="list-unstyled">
-                  {% for petition in latest_petitions %}
-                      <li class="media">
-                        <div class="col-md-3"><img class="d-flex mr-3"
-                          src="{{ petition.picture.url }}" alt="Generic placeholder image">
-                        </div>
-                        <div class="media-body">
-                          <h3>{{ petition.title_text }}</h3>
-                          <p>{{ petition.desc_text }}</p>
-                        </div>
-                      </li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </div>  <!--today-->
-
-            <div id="week" class="tab-pane fade">
-              <div class="row">
-                <ul class="list-unstyled">
-                  <li class="media">
-                    <div class="col-md-3"><img class="d-flex mr-3"
-                      src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
-                    </div>
-                    <div class="media-body">
-                      <h3> Initiative nr.1 </h3>
-                      <p> Description </p>
-                    </div>
-                  </li>
-                  <li class="media my-4">
-                    <div class="col-md-3"><img class="d-flex mr-3"
-                      src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
-                    </div>
-                    <div class="media-body">
-                      <h3> Initiative nr.2 </h3>
-                      <p> Description </p>
-                    </div>
-                  </li>
-                  <li class="media">
-                    <div class="col-md-3"><img class="d-flex mr-3"
-                      src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
-                    </div>
-                    <div class="media-body">
-                      <h3> Initiative nr.3 </h3>
-                      <p> Description </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>  <!--week-->
-
-            <div id="alltime" class="tab-pane fade">
-              <div class="row">
-                <ul class="list-unstyled">
-                  <li class="media">
-                    <div class="col-md-3"><img class="d-flex mr-3"
-                      src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
-                    </div>
-                    <div class="media-body">
-                      <h3> Initiative nr.1 </h3>
-                      <p> Description </p>
-                    </div>
-                  </li>
-                  <li class="media my-4">
-                    <div class="col-md-3"><img class="d-flex mr-3"
-                      src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
-                    </div>
-                    <div class="media-body">
-                      <h3> Initiative nr.2 </h3>
-                      <p> Description </p>
-                    </div>
-                  </li>
-                  <li class="media">
-                    <div class="col-md-3"><img class="d-flex mr-3"
-                      src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
-                    </div>
-                    <div class="media-body">
-                      <h3> Initiative nr.3 </h3>
-                      <p> Description </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>  <!--ALLTIME-->
-          </div>  <!--tab-content-->
-        </div>  <!--POPULAR-->
 
         <div id="newest" class="tab-pane fade">
           <div class="row">
@@ -178,11 +101,8 @@
 
     </div>  <!--container-->
 
-    <nav aria-label="Pages">
-      <ul class="pager">
-        <li><a href="#">Previous</a></li>
-        <li><a href="#">Next</a></li>
-      </ul>
-    </nav>
+    <div class=".col-md-4 text-center">
+      <button id="button" type="button" class="btn btn-default">Show More</button>
+    </div>
 
 {% endblock %}
