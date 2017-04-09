@@ -2,6 +2,7 @@ import requests
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.views import View
+from django.urls import reverse
 from .models import Greeting, Petition
 from .forms import PetitionForm
 
@@ -38,7 +39,7 @@ class CreateView(View):
             petition.improvement = improvement
             petition.title_text = title
             petition.save()
-            return redirect('index')
+            return HttpResponseRedirect(reverse('index'))
         return render(request, self.template_name, {'form': form})
 
     def get(self, request):
