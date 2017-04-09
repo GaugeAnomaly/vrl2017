@@ -12,6 +12,7 @@ class Petition(models.Model):
     votes = models.IntegerField(default=0)
     desc_text = models.CharField(max_length=1000, default='Oleks tore kui saaks rohkem pannkooke')
     improvement = models.CharField(max_length=1000, default='Oleks tore kui saaks rohkem pannkooke')
+    picture = models.ImageField()
 
     def __str__(self):
         return self.title_text
