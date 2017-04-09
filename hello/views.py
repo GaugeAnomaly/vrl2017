@@ -7,21 +7,20 @@ from .models import Greeting, Petition
 
 # Create your views here.
 def index(request):
-    #r = requests.get('http://www.neti.ee')
-    #r = requests.get('http://httpbin.org/status/418')
-    #print(r.text)
-    #return HttpResponse(r.text)
+    # r = requests.get('http://httpbin.org/status/418')
+    # return HttpResponse(r.text)
     # return HttpResponse('Hello from Python!')
     return render(request, 'home.html')
 
 
 def all(request):
-    petition = Petition()
-    petitions = Petition.objects.all()
-    return render(request, 'initiatives.html', {'petitions': petitions})
+    latest_petitions = Petition.objects.order_by('-pub_date')[:10]
+    return render(request, 'petitions.html', {'latest_petitions': latest_petitions})
+
 
 def create(request):
     return render(request, 'create.html')
+
 
 def results(request):
     return render(request, 'results.html')

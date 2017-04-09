@@ -40,6 +40,7 @@
     <div id="initiative" class="container">
       <h1> Create your Initiative! </h1>
       <form>
+        {% csrf_token %}
         <ol>
           <li><div class="form-group">
             <label for="name">What initiative do you want to announce?</label>

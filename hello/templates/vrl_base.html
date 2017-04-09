@@ -19,10 +19,10 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="/initiative">Create Initiative</a></li>
-                <li><a href="/all">All Initiatives</a></li>
-                <li><a href="/results">Results</a></li>
-                <li class="login"><a href="/">Log in</a></li>
+                <li><a href="{% url 'create' %}">Create Initiative</a></li>
+                <li><a href="{% url 'petitions' %}">All Initiatives</a></li>
+                <li><a href="{% url 'results' %}">Results</a></li>
+                <li class="login"><a href="{% url 'login' %}">Log in</a></li>
               </ul>
             </div>
           </div>
@@ -58,7 +58,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
