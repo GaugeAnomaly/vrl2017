@@ -34,11 +34,12 @@ class CreateView(View):
             desc_text = form.cleaned_data['desc_text']
             improvement = form.cleaned_data['improvement']
             title = form.cleaned_data['title_text']
-            petition = form.save(commit=False)
-            petition.desc_text = desc_text
-            petition.improvement = improvement
-            petition.title_text = title
-            petition.save()
+            form.save()
+            #petition = form.save(commit=False)
+            #petition.desc_text = desc_text
+            #petition.improvement = improvement
+            #petition.title_text = title
+            #petition.save()
             return HttpResponseRedirect(reverse('index'))
         return render(request, self.template_name, {'form': form})
 
