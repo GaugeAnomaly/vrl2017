@@ -59,7 +59,7 @@
                   {% for petition in latest_petitions %}
                       <li class="media">
                         <div class="col-md-3"><img class="d-flex mr-3"
-                          src="../static/images/anatoomikum.jpg" alt="Generic placeholder image">
+                          src="{{ petition.picture.url }}" alt="Generic placeholder image">
                         </div>
                         <div class="media-body">
                           <h3>{{ petition.title_text }}</h3>
