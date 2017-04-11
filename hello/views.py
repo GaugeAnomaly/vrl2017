@@ -9,7 +9,7 @@ from .forms import PetitionForm
 
 # Create your views here.
 class IndexView(View):
-    def post():
+    def post(self, request):
         return render(request, 'home.html')
     
     @staticmethod
