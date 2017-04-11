@@ -9,6 +9,9 @@ from .forms import PetitionForm
 
 # Create your views here.
 class IndexView(View):
+    def post():
+        return render(request, 'home.html')
+    
     @staticmethod
     def get(request):
         # r = requests.get('http://httpbin.org/status/418')
