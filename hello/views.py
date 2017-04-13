@@ -38,7 +38,7 @@ class CreateView(View):
             improvement = form.cleaned_data['improvement']
             title = form.cleaned_data['title_text']
             form.save()
-            petition = form.save(commit=False)
+            petition = form.save(commit=True)
             petition.desc_text = desc_text
             petition.improvement = improvement
             petition.title_text = title
