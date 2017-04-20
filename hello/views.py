@@ -40,7 +40,7 @@ class CreateView(View):
             #petition.improvement = improvement
             #petition.title_text = title
             #petition.save()
-            return HttpResponseRedirect(reverse('index'))
+            return HttpResponseRedirect(reverse('results'))
         return render(request, self.template_name, {'form': form})
 
     def get(self, request):
