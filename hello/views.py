@@ -52,8 +52,10 @@ class CreateView(View):
 
 
 class ResultsView(View):
-    @staticmethod
-    def get(request):
+    def post(self, request):
+        return HttpResponse("JEEEEEE")
+    
+    def get(self, request):
         return render(request, 'results.html')
 
 
