@@ -12,7 +12,7 @@
     <title>UT-IP - Make University a Better Place</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -24,8 +24,8 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="../static/create.css" rel="stylesheet">
-    <link href="../static/style.css" rel="stylesheet">
+    <link href="../../static/create.css" rel="stylesheet">
+    <link href="../../static/style.css" rel="stylesheet">
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -39,7 +39,7 @@
 
     <div id="initiative" class="container">
       <h1> Create your Initiative! </h1>
-      <form enctype="multipart/form-data" action="/" method="post">
+      <form enctype="multipart/form-data" method="post">
         {% csrf_token %}
         {{ form.non_field_errors }}
         <ol>

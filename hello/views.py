@@ -2,15 +2,17 @@ import requests
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.views import View
-from django.urls import reverse
-from django.views.generic.edit import FormView
+from django.urls import reverse_lazy
+from django.views.generic.edit import FormView, CreateView
+from django.views.generic.detail import DetailView
 from .models import Greeting, Petition
 from .forms import PetitionForm
 
 
 # Create your views here.
 class IndexView(View):
-    def post(self, request):
+    def post(self, request, *args, **kwargs):
+        return HttpResponse("POST TO INDEXVIEW")
         return render(request, 'home.html')
     
     @staticmethod
@@ -28,13 +30,15 @@ class PetitionsView(View):
         return render(request, 'petitions.html', {'latest_petitions': latest_petitions})
 
 
-class CreateView(FormView):
-    form_class = PetitionForm
-    template_name = 'create.html'
-    success_url = reverse('results')
-
+class PetitionCreate(CreateView):
+    model = Petition
+    fields = ['title_text','votes','desc_text','improvement','picture']
+    success_url = '/'#reverse_lazy('results')
+"""
     def post(self, request, *args, **kwargs):
-        form = self.pf(request.POST, request.FILES)
+        return HttpResponse("POST TO CREATE")
+        form_class = self.get_form_class()
+        form = self.get_form(form_class)
         if form.is_valid():
             desc_text = form.cleaned_data['desc_text']
             improvement = form.cleaned_data['improvement']
@@ -51,17 +55,26 @@ class CreateView(FormView):
         #return render(request, self.template_name, {'form': form})
 
     def get(self, request, **kwargs):
-        form = self.pf
+        form = self.get_form_class()
         return render(request, self.template_name, {'form': form})
-
+"""
 
 class ResultsView(View):
-    def post(self, request):
+    def post(self, request, *args, **kwargs):
         return HttpResponse("JEEEEEE")
 
     def get(self, request):
+        return HttpResponse("JEEEEEE")
         return render(request, 'results.html')
 
+
+class PetitionDetailView(DetailView):
+    model = Petition
+
+    def get_context_data(self, **kwargs):
+        context = super(PetitionDetailView, self).get_context_data(**kwargs)
+        #context['now'] = timezone.now()
+        return context
 
 def db(request):
     greeting = Greeting()

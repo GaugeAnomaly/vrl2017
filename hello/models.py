@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 # Create your models here.
@@ -16,3 +17,6 @@ class Petition(models.Model):
 
     def __str__(self):
         return self.title_text
+
+    def get_absolute_url(self):
+        return reverse('petition-detail', kwargs={'pk': self.pk})
