@@ -1,6 +1,10 @@
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
+.carousel {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
