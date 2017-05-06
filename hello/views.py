@@ -103,6 +103,12 @@ class PetitionDetailView(DetailView):
         #context['now'] = timezone.now()
         return context
 
+
+class AboutView(View):
+    def get(self):
+        return render(self, 'hello/about.html')
+
+
 def db(request):
     greeting = Greeting()
     greeting.save()
