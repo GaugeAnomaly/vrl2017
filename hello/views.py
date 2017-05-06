@@ -105,8 +105,8 @@ class PetitionDetailView(DetailView):
 
 
 class AboutView(View):
-    def get(self):
-        return render(self, 'hello/about.html')
+    def get(self, request):
+        return render(request, 'about.html')
 
 
 def db(request):
