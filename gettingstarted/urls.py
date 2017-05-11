@@ -6,6 +6,7 @@ from hello import views
 from hello.models import Petition
 from django.views.generic import ListView
 from django.contrib import admin
+from django.utils.translation import ugettext_lazy as _
 admin.autodiscover()
 
 
