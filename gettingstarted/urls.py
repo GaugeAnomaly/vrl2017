@@ -6,6 +6,7 @@ from hello import views
 from hello.models import Petition
 from django.views.generic import ListView
 from django.contrib import admin
+from django.utils.translation import ugettext_lazy as _
 admin.autodiscover()
 
 
@@ -21,6 +22,7 @@ urlpatterns = [
     url(r'^petition/(?P<id>\d+)/$', DetailView.as_view(model=Petition), name='petition-detail'),
     url(r'^create/$', views.model_form_upload, name='create'),
     url(r'^results/$', ListView.as_view(model=Petition), name='results'),
+    url(r'^about/$', views.AboutView.as_view(), name='about'),
     url(r'^db', views.db, name='db'),
     url(r'^admin/', include(admin.site.urls)),
     url("^soc/", include("social_django.urls", namespace="social")),
