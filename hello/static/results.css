@@ -1,1 +1,38 @@
-#title,.pager{padding-bottom:10px}#title{text-align:center;font-size:80px;margin-top:70px;border-bottom-style:solid}#results img{width:400px;height:300px}#results{margin-top:150px;margin-left:130px}#results .col-md-3{margin-left:40px;margin-right:40px}#results p{font-size:25px}#results h2{font-size:43px}.pager{font-size:20px;margin-bottom:auto}
+/* RESULTS */
+
+#title{
+  text-align: center;
+  font-size: 80px;
+  margin-top: 70px;
+  border-bottom-style: solid;
+  padding-bottom: 10px;
+}
+
+#results img {
+  width: 400px;
+  height: 300px;
+}
+
+#results{
+  margin-top: 150px;
+  margin-left: 130px;
+}
+
+#results .col-md-3 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#results p {
+  font-size: 25px;
+}
+
+#results h2 {
+  font-size: 43px;
+}
+
+.pager {
+  font-size: 20px;
+  padding-bottom: 10px;
+  margin-bottom: auto;
+}
