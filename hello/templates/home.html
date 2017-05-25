@@ -60,7 +60,7 @@
 <!-- Marketing messaging and featurettes==================================================-->
 <div class="container marketing">
     <ul class="list-unstyled">
-        <li class="media" img-src="new1.jpg">  <!--<img  new1.jpg"  >-->
+        <li class="media"> <img class="img-circle pull-left gap-right lazy" src="../static/images/new1.jpg" alt="Generic placeholder image" width="140" height="130">
             <div class="media-body">
                 <h2 class="mt-0 mb-1">Initiative nr. 1 </h2>
                 <p> Here is small description of 1. initiative </p>
@@ -69,12 +69,15 @@
         </li>
 
         <script>
-            $(window).load(function() {
-            $('li[img-src]').prepend(function(index){
-            var pilt = $(this).attr('img-src')
-            return '<img class="img-circle pull-left gap-right" width="140" height="130" alt="Generic placeholder image" src="../static/images/' + pilt + '">'
-            })
-            })
+            $(function() {
+                $("img.lazy").lazyload({
+                      event : "sporty"
+                });
+            });
+
+            $(window).bind("load", function() {
+                var timeout = setTimeout(function() { $("img.lazy").trigger("sporty") }, 5000);
+            });
         </script>
 
         <li class="media"> <img class="img-circle pull-left gap-right" src="../static/images/new2.jpg" alt="Generic placeholder image" width="140" height="130">
