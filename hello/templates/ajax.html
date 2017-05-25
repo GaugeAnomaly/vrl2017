@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <title>AJAX bookmarks</title>
 </head>
-<body>
+<body onload="selectTitle()">
     <h1>Vali uudiste portaal</h1>
-    <a href="#delfi">Delfi</a>
-    <a href="#postimees">Postimees</a>
+    <a href="#create">Loomine</a>
+    <a href="#landing">Pealeht</a>
     <h2 id="title"></h2>
 
     <script>
-        function getTitle() {
+        window.onhashchange = selectTitle;
+        function selectTitle() {
+            if(location.hash === "#create")
+                getTitle("/create");
+            else if (location.hash === "#landing")
+                getTitle("/")
+        }
+
+        function getTitle(url) {
             var xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function () {
                 if (this.readyState === 4 && this.status === 200) {
@@ -19,7 +27,7 @@
                     this.responseText;
                 }
             }
-            xhr.open("GET", "http://www.postimees.ee/");
+            xhr.open("GET", url);
             xhr.send();
         }
     </script>
