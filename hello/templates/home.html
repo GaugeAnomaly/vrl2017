@@ -60,25 +60,13 @@
 <!-- Marketing messaging and featurettes==================================================-->
 <div class="container marketing">
     <ul class="list-unstyled">
-        <li class="media"> <img class="img-circle pull-left gap-right lazy" src="../static/images/new1.jpg" alt="Generic placeholder image" width="140" height="130">
+        <li class="media"> <img class="lazy img-circle pull-left gap-right" data-original="../static/images/new1.jpg" alt="Generic placeholder image" width="140" height="130" src="../static/images/new1.jpg">
             <div class="media-body">
                 <h2 class="mt-0 mb-1">Initiative nr. 1 </h2>
                 <p> Here is small description of 1. initiative </p>
                 <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
             </div>
         </li>
-
-        <script>
-            $(function() {
-                $("img.lazy").lazyload({
-                      event : "sporty"
-                });
-            });
-
-            $(window).bind("load", function() {
-                var timeout = setTimeout(function() { $("img.lazy").trigger("sporty") }, 5000);
-            });
-        </script>
 
         <li class="media"> <img class="img-circle pull-left gap-right" src="../static/images/new2.jpg" alt="Generic placeholder image" width="140" height="130">
             <div class="media-body">
@@ -96,6 +84,19 @@
         </li>
     </ul>
 </div>
+
+<script>
+    $(function() {
+        $("img.lazy").lazyload({
+              event : "sporty"
+        });
+    });
+
+    $(window).bind("load", function() {
+        var timeout = setTimeout(function() { $("img.lazy").trigger("sporty") }, 5000);
+    });
+</script>
+
 <nav aria-label="Pages">
     <ul class="pager">
         <li><a href="/">Previous</a></li>
