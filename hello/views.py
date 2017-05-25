@@ -110,6 +110,9 @@ class AboutView(View):
         return render(request, 'about.html')
 
 
+def ajax(request):
+    return render(request, 'ajax.html')
+
 def db(request):
     greeting = Greeting()
     greeting.save()

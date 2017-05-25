@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX bookmarks</title>
+</head>
+<body>
+    <h1>Vali uudiste portaal</h1>
+    <a href="#delfi">Delfi</a>
+    <a href="#postimees">Postimees</a>
+    <h2 id="title"></h2>
+
+    <script>
+        function getTitle() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4 && this.status === 200) {
+                    document.getElementById("title").innerHTML =
+                    this.responseText;
+                }
+            }
+            xhr.open("GET", "http://www.postimees.ee/");
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^create/$', views.model_form_upload, name='create'),
     url(r'^results/$', ListView.as_view(model=Petition), name='results'),
     url(r'^about/$', views.AboutView.as_view(), name='about'),
+    url('ajax/',views.ajax, name='ajax'),
     url(r'^db', views.db, name='db'),
     url(r'^admin/', include(admin.site.urls)),
     url("^soc/", include("social_django.urls", namespace="social")),
