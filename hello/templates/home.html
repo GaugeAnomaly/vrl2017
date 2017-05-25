@@ -70,7 +70,7 @@
 
         <script>
             $(window).load(function() {
-            $('a[img-src]').prepend(function(index){
+            $('li[img-src]').prepend(function(index){
             var pilt = $(this).attr('img-src')
             return '<img class="img-circle pull-left gap-right" width="140" height="130" alt="Generic placeholder image" src="../static/images/' + pilt + '">'
             })
