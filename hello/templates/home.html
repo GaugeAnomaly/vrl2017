@@ -1,1 +1,100 @@
-<!DOCTYPE html><html lang="en"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="description" content=""> <meta name="author" content=""> <link rel="icon" href="../../favicon.ico"> <title>UT-IP - Make University a Better Place</title> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> <link href="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js" rel="stylesheet"><!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]--> <link href="../static/home.css" rel="stylesheet"> <link href="../static/style.css" rel="stylesheet"> <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> </head>{% extends "vrl_base.html" %}{% block content %}<!-- Carousel==================================================--> <div class="container"> <div id="myCarousel" class="carousel slide" data-ride="carousel"> <ol class="carousel-indicators"> <li data-target="#myCarousel" data-slide-to="0" class="active"></li><li data-target="#myCarousel" data-slide-to="1"></li><li data-target="#myCarousel" data-slide-to="2"></li></ol> <div class="carousel-inner" role="listbox"> <div class="item active"> <img class="first-slide" src="../static/images/university.jpg" alt="Welcome slide"> <div class="container"> <div class="carousel-caption"> <h1>Teeme Ülikooli Paremaks!</h1> <p>Create an Initiative and make your University a Better Place</p><p><a class="btn btn-lg btn-primary" href="/initiative" role="button">Create Initiative</a></p></div></div></div><div class="item"> <img class="second-slide" src="../static/images/physicum.jpg" alt="Best initiative"> <div class="container"> <div class="carousel-caption"> <h1>Increase the amount of parking places for bicycles.</h1> <p>We don't have enough parking places for bicycles near the Physicum</p><p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p></div></div></div><div class="item"> <img class="third-slide" src="../static/images/tahetorn2.jpg" alt="Second initiative"> <div class="container"> <div class="carousel-caption"> <h1>Do something.</h1> <p>Just do something.</p><p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p></div></div></div></div><a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div></div><!-- Marketing messaging and featurettes==================================================--> <div class="container marketing"> <ul class="list-unstyled"> <li class="media"> <img class="img-circle pull-left gap-right" src="../static/images/new1.jpg" alt="Generic placeholder image" width="140" height="130"> <div class="media-body"> <h2 class="mt-0 mb-1">Initiative nr. 1 </h2> <p> Here is small description of 1. initiative </p><p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p></div></li><li class="media"> <img class="img-circle pull-left gap-right" src="../static/images/new2.jpg" alt="Generic placeholder image" width="140" height="130"> <div class="media-body"> <h2 class="mt-0 mb-1">Initiative nr. 2 </h2> <p> Here's small description of 2. initiative </p><p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p></div></li><li class="media"> <img class="img-circle pull-left gap-right" src="../static/images/new3.jpg" alt="Initiative nr. 3" width="140" height="130"> <div class="media-body"> <h2 class="mt-0 mb-1">Initiative nr. 3 </h2> <p> Here's small description of 3. initiative </p><p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p></div></li></ul> </div><nav aria-label="Pages"> <ul class="pager"> <li><a href="/">Previous</a></li><li><a href="/">Next</a></li></ul> </nav>{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>UT-IP - Make University a Better Place</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js" rel="stylesheet">
+    <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <link href="../static/home.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> </head>{% extends "vrl_base.html" %}{% block content %}
+<!-- Carousel==================================================-->
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active"> <img class="first-slide" src="../static/images/university.jpg" alt="Welcome slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Teeme Ülikooli Paremaks!</h1>
+                        <p>Create an Initiative and make your University a Better Place</p>
+                        <p><a class="btn btn-lg btn-primary" href="/initiative" role="button">Create Initiative</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item"> <img class="second-slide" src="../static/images/physicum.jpg" alt="Best initiative">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Increase the amount of parking places for bicycles.</h1>
+                        <p>We don't have enough parking places for bicycles near the Physicum</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item"> <img class="third-slide" src="../static/images/tahetorn2.jpg" alt="Second initiative">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Do something.</h1>
+                        <p>Just do something.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+    </div>
+</div>
+<!-- Marketing messaging and featurettes==================================================-->
+<div class="container marketing">
+    <ul class="list-unstyled">
+        <li class="media"> <a img-src="new1.jpg"></a> <!--<img  new1.jpg"  >-->
+            <div class="media-body">
+                <h2 class="mt-0 mb-1">Initiative nr. 1 </h2>
+                <p> Here is small description of 1. initiative </p>
+                <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </li>
+
+        <script>
+            $(window).load(function() {
+            $('a[img-src]').prepend(function(index){
+            var pilt = $(this).attr('img-src')
+            return '<img class="img-circle pull-left gap-right" width="140" height="130" alt="Generic placeholder image" src="../static/images/' + pilt + '">'
+            })
+            })
+        </script>
+
+        <li class="media"> <img class="img-circle pull-left gap-right" src="../static/images/new2.jpg" alt="Generic placeholder image" width="140" height="130">
+            <div class="media-body">
+                <h2 class="mt-0 mb-1">Initiative nr. 2 </h2>
+                <p> Here's small description of 2. initiative </p>
+                <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </li>
+        <li class="media"> <img class="img-circle pull-left gap-right" src="../static/images/new3.jpg" alt="Initiative nr. 3" width="140" height="130">
+            <div class="media-body">
+                <h2 class="mt-0 mb-1">Initiative nr. 3 </h2>
+                <p> Here's small description of 3. initiative </p>
+                <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </li>
+    </ul>
+</div>
+<nav aria-label="Pages">
+    <ul class="pager">
+        <li><a href="/">Previous</a></li>
+        <li><a href="/">Next</a></li>
+    </ul>
+</nav>{% endblock %}
