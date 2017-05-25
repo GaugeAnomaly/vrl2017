@@ -60,7 +60,7 @@
 <!-- Marketing messaging and featurettes==================================================-->
 <div class="container marketing">
     <ul class="list-unstyled">
-        <li class="media"> <img class="lazy img-circle pull-left gap-right" data-original="../static/images/new1.jpg" alt="Generic placeholder image" width="140" height="130" src="http://i.imgur.com/7ZMlu3C.gif">
+        <li class="media"> <img class="load-delay img-circle pull-left gap-right" data-original="../static/images/new1.jpg" alt="Generic placeholder image" width="140" height="130" src="http://i.imgur.com/7ZMlu3C.gif">
             <div class="media-body">
                 <h2 class="mt-0 mb-1">Initiative nr. 1 </h2>
                 <p> Here is small description of 1. initiative </p>
@@ -86,14 +86,14 @@
 </div>
 
 <script>
-    $(function() {
-        $("img.lazy").lazyload({
-              event : "sporty"
-        });
-    });
-
-    $(window).bind("load", function() {
-        var timeout = setTimeout(function() { $("img.lazy").trigger("sporty") }, 5000);
+    $(document).ready(function () {
+          setTimeout(function () {
+                $('.load-delay').each(function () {
+                        var imagex = $(this);
+                        var imgOriginal = imagex.data('original');
+                        $(imagex).attr('src', imgOriginal);
+                });
+        }, 3000);
     });
 </script>
 
